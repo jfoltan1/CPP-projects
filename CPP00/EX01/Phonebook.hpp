@@ -2,22 +2,19 @@
 #define PHONEBOOK_H
 
 
-#include <Contacts.hpp>
+#include <Contact.hpp>
 class Phonebook
 {
-private:
-	/* data */
-public:
-	Phonebook(/* args */);
+	private:
+		Contact contacts[8];
+		int	index;
+	public:
+	Phonebook();
 	~Phonebook();
+	void 	add();
+	void	search();
+	void	print(Contact contact);
+	Contact get_contact(int index);
 };
-
-Phonebook::Phonebook(/* args */)
-{
-}
-
-Phonebook::~Phonebook()
-{
-}
 
 #endif
